@@ -9,7 +9,7 @@ eureka:
 hystrix:
     dashboard:
         serviceName: customer-microservice
-        clusterName: zincoGroup
+        clusterName: quickplayGroup
 
 zuul:
     proxy:
