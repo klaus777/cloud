@@ -3,7 +3,7 @@ eureka:
         leaseRenewalIntervalInSeconds:10
     client:
         serviceUrl:
-            defaultZone: http://localhost:8762/v2/
+            defaultZone: http://localhost:7001/v2/
 
 miguel:
   test: hello world, from Bitbucket!!!
@@ -16,6 +16,6 @@ hystrix:
 zuul:
     proxy:
         route:
-            customer: /api1
-            tenant: /api2
-            device: /api3
+            customer-microservice: /customer
+            tenant-microservice: /tenant
+            device-microservice: /device
