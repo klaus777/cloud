@@ -8,7 +8,7 @@ eureka:
 
 hystrix:
     dashboard:
-        serviceName: customer-microservice
+        serviceName: quickplay-turbine
         clusterName: quickplayGroup
 
 zuul:
