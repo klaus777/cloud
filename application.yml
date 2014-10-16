@@ -9,7 +9,7 @@ eureka:
 zinco-hystrix:
     dashboard:
         serviceName: zinco-turbine
-        clusterName: ZincoGroup
+        clusterName: zincoGroup
 
 zinco-zuul:
     proxy:
