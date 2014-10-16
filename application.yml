@@ -8,7 +8,7 @@ eureka:
 
 hystrix:
     dashboard:
-        serviceName: zinco-turbine
+        serviceName: customer-microservice
         clusterName: zincoGroup
 
 zuul:
