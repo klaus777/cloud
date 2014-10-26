@@ -13,6 +13,13 @@ hystrix:
         serviceName: quickplay-turbine
         clusterName: quickplayGroup
 
+creditcard-microservice:
+    braintree:
+         environment: sandbox
+         merchantId: ddd44gynpmzcw45f
+         publicKey: b4vn98989c7xs7dn
+         privateKey: b197ffecb8077b6932fc3c69ef11f91a
+
 zuul:
     proxy:
         route:
