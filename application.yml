@@ -13,6 +13,11 @@ hystrix:
         serviceName: quickplay-turbine
         clusterName: quickplayGroup
 
+product-microservice:
+    solr:
+         readUrl: localhost:8983/solr
+         writeUrl: localhost:8983/solr
+         
 creditcard-microservice:
     braintree:
          environment: sandbox
