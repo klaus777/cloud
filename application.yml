@@ -18,6 +18,7 @@ product-microservice:
          readUrl: http://localhost:8983/solr/select
          writeUrl: http://localhost:8983/solr/update
          defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
+         defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
          
 creditcard-microservice:
     braintree:
