@@ -44,9 +44,7 @@ hls-microservice:
 offer-microservice:
          databaseServiceName: database-microservervice
 
-bookmark-microservice:
-         databaseServiceName: database-microservervice
-         
+
          
 playback-microservice:
          databaseServiceName: database-microservervice
@@ -58,22 +56,15 @@ product-microservice:
          defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
          defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
          databaseServiceName: database-microservervice
-         
-purchase-microservice:
-         databaseServiceName: database-microservervice
-         
-         
+
 promotion-microservice:
          databaseServiceName: database-microservervice        
 
-
-
-product-microservice:
-         databaseServiceName: database-microservervice
          
          
 purchase-microservice:
          databaseServiceName: database-microservervice
+         
          
          
 rating-microservice:
