@@ -50,12 +50,12 @@ playback-microservice:
          databaseServiceName: database-microservervice
 
 product-microservice:
-    solr:
          readUrl: http://localhost:8983/solr/select
          writeUrl: http://localhost:8983/solr/update
          defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
          defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
          databaseServiceName: database-microservervice
+         tenantServiceName: tenant-microservervice
 
 promotion-microservice:
          databaseServiceName: database-microservervice        
