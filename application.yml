@@ -13,20 +13,83 @@ hystrix:
         serviceName: quickplay-turbine
         clusterName: quickplayGroup
 
-product-microservice:
-    solr:
-         readUrl: http://localhost:8983/solr/select
-         writeUrl: http://localhost:8983/solr/update
-         defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
-         defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
+
          
+bookmark-microservice:
+         databaseServiceName: database-microservervice
+
 creditcard-microservice:
     braintree:
          environment: sandbox
          merchantId: ddd44gynpmzcw45f
          publicKey: b4vn98989c7xs7dn
          privateKey: b197ffecb8077b6932fc3c69ef11f91a
+         databaseServiceName: database-microservervice
 
+customer-microservice:
+         databaseServiceName: database-microservervice
+
+device-microservice:
+         databaseServiceName: database-microservervice
+
+entitlement-microservice:
+         databaseServiceName: database-microservervice
+
+genre-microservice:
+         databaseServiceName: database-microservervice
+
+hls-microservice:
+         databaseServiceName: database-microservervice
+
+offer-microservice:
+         databaseServiceName: database-microservervice
+
+bookmark-microservice:
+         databaseServiceName: database-microservervice
+         
+         
+playback-microservice:
+         databaseServiceName: database-microservervice
+
+product-microservice:
+    solr:
+         readUrl: http://localhost:8983/solr/select
+         writeUrl: http://localhost:8983/solr/update
+         defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
+         defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
+         databaseServiceName: database-microservervice
+         
+purchase-microservice:
+         databaseServiceName: database-microservervice
+         
+         
+promotion-microservice:
+         databaseServiceName: database-microservervice        
+
+
+
+product-microservice:
+         databaseServiceName: database-microservervice
+         
+         
+purchase-microservice:
+         databaseServiceName: database-microservervice
+         
+         
+rating-microservice:
+         databaseServiceName: database-microservervice
+         
+review-microservice:
+         databaseServiceName: database-microservervice
+         
+tenant-microservice:
+         databaseServiceName: database-microservervice
+    
+watchhistory-microservice:
+         databaseServiceName: database-microservervice
+         
+workflow-microservice:
+         databaseServiceName: database-microservervice
 zuul:
     proxy:
         route:
