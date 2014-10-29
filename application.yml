@@ -43,7 +43,7 @@ hls-microservice:
 
 offer-microservice:
          databaseServiceName: http://database-microservice
-
+         
 
          
 playback-microservice:
@@ -56,6 +56,7 @@ product-microservice:
          defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
          databaseServiceName: http://database-microservice
          tenantServiceName: http://tenant-microservice
+         offerServiceName: http://offer-microservice
 
 promotion-microservice:
          databaseServiceName: http://database-microservice        
