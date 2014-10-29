@@ -16,7 +16,7 @@ hystrix:
 
          
 bookmark-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 
 creditcard-microservice:
     braintree:
@@ -24,63 +24,63 @@ creditcard-microservice:
          merchantId: ddd44gynpmzcw45f
          publicKey: b4vn98989c7xs7dn
          privateKey: b197ffecb8077b6932fc3c69ef11f91a
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 
 customer-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 
 device-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 
 entitlement-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 
 genre-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 
 hls-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 
 offer-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 
 
          
 playback-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 
 product-microservice:
          readUrl: http://localhost:8983/solr/select
          writeUrl: http://localhost:8983/solr/update
          defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
          defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
-         databaseServiceName: database-microservice
-         tenantServiceName: tenant-microservice
+         databaseServiceName: http://database-microservice
+         tenantServiceName: http://tenant-microservice
 
 promotion-microservice:
-         databaseServiceName: database-microservice        
+         databaseServiceName: http://database-microservice        
 
          
          
 purchase-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
          
          
          
 rating-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
          
 review-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
          
 tenant-microservice:
          databaseServiceName: http://database-microservice
     
 watchhistory-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
          
 workflow-microservice:
-         databaseServiceName: database-microservice
+         databaseServiceName: http://database-microservice
 zuul:
     proxy:
         route:
