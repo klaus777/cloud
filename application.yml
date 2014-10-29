@@ -74,7 +74,7 @@ review-microservice:
          databaseServiceName: database-microservervice
          
 tenant-microservice:
-         databaseServiceName: database-microservervice
+         databaseServiceName: http://database-microservervice
     
 watchhistory-microservice:
          databaseServiceName: database-microservervice
