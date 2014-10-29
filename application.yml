@@ -23,7 +23,7 @@ creditcard-microservice:
          braintreeEnvironment: sandbox
          braintreeMerchantId: ddd44gynpmzcw45f
          braintreePublicKey: b4vn98989c7xs7dn
-         raintreePrivateKey: b197ffecb8077b6932fc3c69ef11f91a
+         braintreePrivateKey: b197ffecb8077b6932fc3c69ef11f91a
          databaseServiceName: http://database-microservice
 
 customer-microservice:
@@ -71,7 +71,7 @@ purchase-microservice:
          braintreeEnvironment: sandbox
          braintreeMerchantId: ddd44gynpmzcw45f
          braintreePublicKey: b4vn98989c7xs7dn
-         raintreePrivateKey: b197ffecb8077b6932fc3c69ef11f91a
+         braintreePrivateKey: b197ffecb8077b6932fc3c69ef11f91a
          
 rating-microservice:
          databaseServiceName: http://database-microservice
