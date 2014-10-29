@@ -20,10 +20,10 @@ bookmark-microservice:
 
 creditcard-microservice:
     braintree:
-         braintreeEnvironment: sandbox
-         braintreeMerchantId: ddd44gynpmzcw45f
-         braintreePublicKey: b4vn98989c7xs7dn
-         braintreePrivateKey: b197ffecb8077b6932fc3c69ef11f91a
+         environment: sandbox
+         merchantId: ddd44gynpmzcw45f
+         publicKey: b4vn98989c7xs7dn
+         privateKey: b197ffecb8077b6932fc3c69ef11f91a
          databaseServiceName: http://database-microservice
 
 customer-microservice:
@@ -68,10 +68,11 @@ purchase-microservice:
          databaseServiceName: http://database-microservice
          tenantServiceName: http://tenant-microservice
          offerServiceName: http://offer-microservice
-         braintreeEnvironment: sandbox
-         braintreeMerchantId: ddd44gynpmzcw45f
-         braintreePublicKey: b4vn98989c7xs7dn
-         braintreePrivateKey: b197ffecb8077b6932fc3c69ef11f91a
+         braintree: 
+                environment: sandbox
+                merchantId: ddd44gynpmzcw45f
+                publicKey: b4vn98989c7xs7dn
+                privateKey: b197ffecb8077b6932fc3c69ef11f91a
          
 rating-microservice:
          databaseServiceName: http://database-microservice
