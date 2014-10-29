@@ -20,10 +20,10 @@ bookmark-microservice:
 
 creditcard-microservice:
     braintree:
-         environment: sandbox
-         merchantId: ddd44gynpmzcw45f
-         publicKey: b4vn98989c7xs7dn
-         privateKey: b197ffecb8077b6932fc3c69ef11f91a
+         braintreeEnvironment: sandbox
+         braintreeMerchantId: ddd44gynpmzcw45f
+         braintreePublicKey: b4vn98989c7xs7dn
+         raintreePrivateKey: b197ffecb8077b6932fc3c69ef11f91a
          databaseServiceName: http://database-microservice
 
 customer-microservice:
@@ -50,8 +50,8 @@ playback-microservice:
          databaseServiceName: http://database-microservice
 
 product-microservice:
-         readUrl: http://localhost:8983/solr/select
-         writeUrl: http://localhost:8983/solr/update
+         solrReadUrl: http://localhost:8983/solr/select
+         solrWriteUrl: http://localhost:8983/solr/update
          defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
          defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
          databaseServiceName: http://database-microservice
@@ -64,9 +64,14 @@ promotion-microservice:
          
          
 purchase-microservice:
+         solrReadUrl: http://localhost:8983/solr/select
          databaseServiceName: http://database-microservice
-         
-         
+         tenantServiceName: http://tenant-microservice
+         offerServiceName: http://offer-microservice
+         braintreeEnvironment: sandbox
+         braintreeMerchantId: ddd44gynpmzcw45f
+         braintreePublicKey: b4vn98989c7xs7dn
+         raintreePrivateKey: b197ffecb8077b6932fc3c69ef11f91a
          
 rating-microservice:
          databaseServiceName: http://database-microservice
