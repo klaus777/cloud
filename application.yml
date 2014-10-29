@@ -55,7 +55,7 @@ product-microservice:
          defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
          defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
          databaseServiceName: database-microservice
-         tenantServiceName: tenant-microservervice
+         tenantServiceName: tenant-microservice
 
 promotion-microservice:
          databaseServiceName: database-microservice        
