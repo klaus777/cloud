@@ -80,6 +80,12 @@ rating-microservice:
 review-microservice:
          databaseServiceName: http://database-microservice
          
+rotten-tomatoes-microservice:
+        applicationName: LibertasQP
+        applicationKey: nwwhgh8hhtfvu77u85s25nc8
+        databaseServiceName: http://database-microservice
+        solrReadUrl: http://localhost:8983/solr/select
+        
 tenant-microservice:
          databaseServiceName: http://database-microservice
     
