@@ -58,7 +58,7 @@ product-microservice:
          tenantServiceName: http://tenant-microservice
          offerServiceName: http://offer-microservice
          
-rotten-tomatoes-enrich-microservice
+rotten-tomatoes-enrich-microservice:
         solrReadUrl: http://localhost:8983/solr/select
         solrWriteUrl: http://localhost:8983/solr/update
         databaseServiceName: http://database-microservice
