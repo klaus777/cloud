@@ -95,6 +95,7 @@ rotten-tomatoes-microservice:
         solrReadUrl: http://localhost:8983/solr/select
         searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=${apiKey}&q=${searchTerm}&page_limit=5
         similarQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies/${rottenTomatoesProductId}/similar.json?apikey=${apiKey}
+        rottenTomatoesIdField: rottenTomatoesId
         
 tenant-microservice:
          databaseServiceName: http://database-microservice
