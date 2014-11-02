@@ -38,9 +38,6 @@ entitlement-microservice:
 genre-microservice:
          databaseServiceName: http://database-microservice
 
-hls-microservice:
-         databaseServiceName: http://database-microservice
-
 offer-microservice:
          databaseServiceName: http://database-microservice
          
