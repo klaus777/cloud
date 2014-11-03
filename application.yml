@@ -108,5 +108,5 @@ zuul:
             customer-microservice: /customer
             tenant-microservice: /tenant
             device-microservice: /device
-            recommendation-microservice: /recommendation
-            rotten-tomatoes-microservice: /rt-recommedation
+            recommendation-microservice: /v1/recommendation
+            rotten-tomatoes-microservice: /v1/rt-recommedation
