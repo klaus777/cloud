@@ -110,4 +110,4 @@ zuul:
             tenant-microservice: /tenant
             device-microservice: /device
             recommendation-microservice: /v1/recommendation
-            rotten-tomatoes-microservice: /v1/rt-recommedation
+            rotten-tomatoes-microservice: /v1/rt-recommendation
