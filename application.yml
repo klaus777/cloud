@@ -62,7 +62,7 @@ rotten-tomatoes-enrich-microservice:
         searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=${apiKey}&q=${searchTerm}&page_limit=1
         applicationKey: nwwhgh8hhtfvu77u85s25nc8
         solrSchemaChangeUrl: http://localhost:8983/solr/schema/fields
-        quickPlaySourceUrl: http://54.191.76.80:8700/catalog-api/titles?type=movie
+        quickPlaySourceUrl: http://54.191.76.80:8700/catalog-api/titles?type=movie&pageSize=${pageSize}&pageNumber=${pageNumber}
         
 promotion-microservice:
          databaseServiceName: http://database-microservice        
