@@ -63,6 +63,7 @@ rotten-tomatoes-enrich-microservice:
         applicationKey: nwwhgh8hhtfvu77u85s25nc8
         solrSchemaChangeUrl: http://localhost:8983/solr/schema/fields
         quickPlaySourceUrl: http://54.191.76.80:8700/catalog-api/titles?type=movie
+        
 promotion-microservice:
          databaseServiceName: http://database-microservice        
 
