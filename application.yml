@@ -7,7 +7,8 @@ eureka:
 
 hls-microservice:
     hlsKey: key2
-    
+    rottenUrl: http://api.rottentomatoes.com/api/public/v1.0/movies/${rottenTomatoesProductId}/similar.json?apikey=${apiKey}
+
 hystrix:
     dashboard:
         serviceName: quickplay-turbine
@@ -116,3 +117,5 @@ zuul:
             device-microservice: /device
             recommendation-microservice: /v1/recommendation
             rotten-tomatoes-microservice: /v1/rt-recommendation
+            hls-microservice: /v1/hls
+   
