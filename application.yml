@@ -7,7 +7,7 @@ eureka:
 
 hls-microservice:
     hlsKey: key2
-    rottenUrl: http://api.rottentomatoes.com/api/public/v1.0/movies/${rottenTomatoesProductId}/similar.json?apikey=${apiKey}
+    rottenUrl: http://api.rottentomatoes.com/api/public/v1.0/movies/{rottenTomatoesProductId}/similar.json?apikey={apiKey}
 
 hystrix:
     dashboard:
@@ -87,18 +87,18 @@ rotten-tomatoes-enrich-microservice:
         solrReadUrl: http://localhost:8983/solr/select
         solrWriteUrl: http://localhost:8983/solr/update?commit=true
         databaseServiceName: http://database-microservice
-        searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=${apiKey}&q=${searchTerm}&page_limit=1
+        searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey={apiKey}&q={searchTerm}&page_limit=1
         applicationKey: nwwhgh8hhtfvu77u85s25nc8
         solrSchemaChangeUrl: http://localhost:8983/solr/schema/fields
-        quickPlaySourceUrl: http://54.191.76.80:8700/catalog-api/titles?type=movie&pageSize=${pageSize}&pageNumber=${pageNumber}
+        quickPlaySourceUrl: http://54.191.76.80:8700/catalog-api/titles?type=movie&pageSize={pageSize}&pageNumber={pageNumber}
         
 rotten-tomatoes-microservice:
         applicationName: LibertasQP
         applicationKey: nwwhgh8hhtfvu77u85s25nc8
         databaseServiceName: http://database-microservice
         solrReadUrl: http://localhost:8983/solr/select
-        searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=${apiKey}&q=${searchTerm}&page_limit=5
-        similarQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies/${rottenTomatoesProductId}/similar.json?apikey=${apiKey}
+        searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey={apiKey}&q={searchTerm}&page_limit=5
+        similarQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies/{rottenTomatoesProductId}/similar.json?apikey=${apiKey}
         rottenTomatoesIdField: rottenTomatoesId
         manualRecommendationFallbackEnabled: false
         
