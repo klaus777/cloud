@@ -167,3 +167,8 @@ endpoints:
     enabled: true
   error:
     path: /error
+  refresh:
+    id: refresh
+    sensitive: false
+    enabled: true  
+  
