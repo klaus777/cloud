@@ -120,3 +120,50 @@ zuul:
             rotten-tomatoes-microservice: /v1/rt-recommendation
             hls-microservice: /v1/hls
    
+endpoints:
+  autoconfig:
+    id: autoconfig
+    sensitive: false
+    enabled: true
+  beans:
+    id: beans
+    sensitive: false
+    enabled: true
+  env:
+    id: env
+    sensitive: false
+    enabled: true
+  metrics:
+    id: metrics
+    sensitive: false
+    enabled: true
+  extendedmetrics:
+    id: extendedmetrics
+    sensitive: false
+    enabled: true
+  trace:
+    id: trace
+    sensitive: false
+    enabled: true
+  dump:
+    id: dump
+    sensitive: false
+    enabled: true
+  configprops:
+    id: configprops
+    sensitive: false
+    enabled: true
+    keys-to-sanitize: password,secret
+  health:
+    id: health
+    sensitive: false
+    enabled: true
+  info:
+    id: info
+    sensitive: false
+    enabled: true
+  jolokia:
+    sensitive: false
+    enabled: true
+  error:
+    path: /error
