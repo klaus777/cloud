@@ -4,7 +4,10 @@ eureka:
     client:
         serviceUrl:
             defaultZone: http://localhost:7001/v2/
-
+kafka:
+    metadata.broker.list: localhost:9092
+    serializer.class: kafka.serializer.StringEncoder
+    
 hls-microservice:
     hlsKey: key2
     rottenUrl: http://api.rottentomatoes.com/api/public/v1.0/movies/{rottenTomatoesProductId}/similar.json?apikey={apiKey}
