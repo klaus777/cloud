@@ -48,8 +48,8 @@ playback-microservice:
          databaseServiceName: http://database-microservice
 
 product-microservice:
-         solrReadUrl: http://localhost:8983/solr/select
-         solrWriteUrl: http://localhost:8983/solr/update
+         solrReadUrl: http://solr-slave-microservice/solr/select
+         solrWriteUrl: http://solr-master-microservice/solr/update
          defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
          defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
          databaseServiceName: http://database-microservice
@@ -63,7 +63,7 @@ promotion-microservice:
          
          
 purchase-microservice:
-         solrReadUrl: http://localhost:8983/solr/select
+         solrReadUrl: http://solr-slave-microservice/solr/select
          databaseServiceName: http://database-microservice
          tenantServiceName: http://tenant-microservice
          offerServiceName: http://offer-microservice
@@ -80,12 +80,12 @@ review-microservice:
          databaseServiceName: http://database-microservice
 
 recommendation-microservice:
-        solrReadUrl: http://localhost:8983/solr/select
+        solrReadUrl: http://solr-slave-microservice/solr/select
         databaseServiceName: http://database-microservice
         
 rotten-tomatoes-enrich-microservice:
-        solrReadUrl: http://localhost:8983/solr/select
-        solrWriteUrl: http://localhost:8983/solr/update?commit=true
+        solrReadUrl: http://solr-slave-microservice/solr/select
+        solrWriteUrl: http://solr-master-microservice/solr/update?commit=true
         databaseServiceName: http://database-microservice
         searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey={apiKey}&q={searchTerm}&page_limit=1
         applicationKey: nwwhgh8hhtfvu77u85s25nc8
@@ -96,7 +96,7 @@ rotten-tomatoes-microservice:
         applicationName: LibertasQP
         applicationKey: nwwhgh8hhtfvu77u85s25nc8
         databaseServiceName: http://database-microservice
-        solrReadUrl: http://localhost:8983/solr/select
+        solrReadUrl: http://solr-slave-microservice/solr/select
         searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey={apiKey}&q={searchTerm}&page_limit=5
         similarQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies/{rottenTomatoesProductId}/similar.json?apikey={apiKey}
         rottenTomatoesIdField: rottenTomatoesId
