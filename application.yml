@@ -8,7 +8,12 @@ kafka:
     config:
         metadata.broker.list: localhost:9092
         serializer.class: kafka.serializer.StringEncoder
-    
+        
+zookeeper:
+   connectionString: localhost:2181
+   baseSleepTimeMs: 500
+   maxRetries: 10
+   
 hls-microservice:
     hlsKey: key2
     rottenUrl: http://api.rottentomatoes.com/api/public/v1.0/movies/{rottenTomatoesProductId}/similar.json?apikey={apiKey}
@@ -59,7 +64,9 @@ product-microservice:
          databaseServiceName: http://database-microservice
          tenantServiceName: http://tenant-microservice
          offerServiceName: http://offer-microservice
-
+         createProductLockPath: /catalog/product/lock/create
+         createProductLockTimeoutMillis: 10000
+   
 
 promotion-microservice:
          databaseServiceName: http://database-microservice        
