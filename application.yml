@@ -86,6 +86,9 @@ purchase-microservice:
          
 rating-microservice:
          databaseServiceName: http://database-microservice
+         averageUserRatingComputationFrequencyMilis: 600000
+         updateProductPath: /v1/product
+         productServiceName: product-microservice
          
 review-microservice:
          databaseServiceName: http://database-microservice
