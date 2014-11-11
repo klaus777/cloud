@@ -5,10 +5,15 @@ eureka:
         serviceUrl:
             defaultZone: http://localhost:7001/v2/
 kafka:
-    config:
+    producer-config:
         metadata.broker.list: localhost:9092
         serializer.class: kafka.serializer.StringEncoder
-        
+    consumer-config:
+        zookeeper.connect: localhost:2181
+        zookeeper.session.timeout.ms: 1000
+        zookeeper.sync.time.ms: 1000
+        auto.commit.interval.ms: 1000
+
 zookeeper:
    connectionString: localhost:2181
    baseSleepTimeMs: 500
