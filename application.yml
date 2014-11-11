@@ -89,6 +89,7 @@ rating-microservice:
          averageUserRatingComputationFrequencyMilis: 600000
          updateProductPath: /v1/product
          productServiceName: product-microservice
+         maxNumberOfAverageUserRatingComputationConsumer: 5
          
 review-microservice:
          databaseServiceName: http://database-microservice
