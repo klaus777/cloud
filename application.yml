@@ -95,6 +95,7 @@ rating-microservice:
          updateProductPath: /v1/product
          productServiceName: product-microservice
          maxNumberOfAverageUserRatingComputationConsumer: 5
+         kafkaBaseGroupId: rating.base-group.id
          
 review-microservice:
          databaseServiceName: http://database-microservice
