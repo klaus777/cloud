@@ -96,6 +96,7 @@ rating-microservice:
          productServiceName: product-microservice
          maxNumberOfAverageUserRatingComputationConsumer: 5
          kafkaBaseGroupId: rating.base-group.id
+         ratingCreationTopic: createRating
          
 review-microservice:
          databaseServiceName: http://database-microservice
