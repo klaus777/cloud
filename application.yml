@@ -91,10 +91,10 @@ purchase-microservice:
          
 rating-microservice:
          databaseServiceName: http://database-microservice
-         averageUserRatingComputationFrequencyMilis: 600000
+         avgUserRatingComputationFrequencyMilis: 600000
          updateProductPath: /v1/product
          productServiceName: product-microservice
-         averageUserRatingKafkaGroupId: rating.average-user-rating.id
+         avgUserRatingKafkaGroupId: rating.avg-user-rating.id
          ratingCreationTopic: createRating
          
 review-microservice:
