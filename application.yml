@@ -84,6 +84,7 @@ purchase-microservice:
          databaseServiceName: http://database-microservice
          tenantServiceName: http://tenant-microservice
          offerServiceName: http://offer-microservice
+         entitlementServiceName: http://entitlement-microservice
          braintree: 
                 environment: sandbox
                 merchantId: ddd44gynpmzcw45f
