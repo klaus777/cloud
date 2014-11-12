@@ -94,8 +94,7 @@ rating-microservice:
          averageUserRatingComputationFrequencyMilis: 600000
          updateProductPath: /v1/product
          productServiceName: product-microservice
-         maxNumberOfAverageUserRatingComputationConsumer: 5
-         kafkaBaseGroupId: rating.base-group.id
+         averageUserRatingKafkaGroupId: rating.average-user-rating.id
          ratingCreationTopic: createRating
          
 review-microservice:
