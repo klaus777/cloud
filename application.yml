@@ -39,7 +39,8 @@ creditcard-microservice:
          merchantId: ddd44gynpmzcw45f
          publicKey: b4vn98989c7xs7dn
          privateKey: b197ffecb8077b6932fc3c69ef11f91a
-         databaseServiceName: http://database-microservice
+    databaseServiceName: http://database-microservice
+         
 
 customer-microservice:
          databaseServiceName: http://database-microservice
