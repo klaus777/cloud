@@ -44,6 +44,7 @@ creditcard-microservice:
 
 customer-microservice:
          databaseServiceName: http://database-microservice
+         resetPasswordTopic: resetPasswordTopic
 
 device-microservice:
          databaseServiceName: http://database-microservice
