@@ -128,6 +128,7 @@ rotten-tomatoes-microservice:
         
 tenant-microservice:
          databaseServiceName: http://database-microservice
+         createCustomerUrlTemplate: http://customer-microservice/v1/customer
     
 watchhistory-microservice:
          databaseServiceName: http://database-microservice
