@@ -65,7 +65,8 @@ playback-microservice:
          databaseServiceName: http://database-microservice
          playbackResponseTimoutMillis: 200
          playbackResponseMinCount: 1
-         playback-location-request: playback-location-request2
+         playback-location-request-topic: playback-location-request2
+         playback-location-response-topic: playback-location-response2
 
 product-microservice:
          solrReadUrl: http://solr-slave-microservice/solr/select
