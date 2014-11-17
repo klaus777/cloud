@@ -69,7 +69,7 @@ playback-microservice:
          playbackLocationResponseTopic: playback-location-response2
          SolrReadUrl: http://solr-slave-microservice/solr/select
          playbackLocationFrequencyMillis: 10000
-         entitlementServiceUrlTemplate: http://entitlement-microservice/entitlement
+         entitlementServiceUrlTemplate: http://entitlement-microservice/v1/entitlement/check/product/{productId}?customerId={customerId}&apiKey={tenantId}
          deviceSpecMapping:
              mobile.*: .*
 
