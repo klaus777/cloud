@@ -83,13 +83,14 @@ product-microservice:
          offerServiceName: http://offer-microservice
          createProductLockPath: /catalog/product/lock/create
          createProductLockTimeoutMillis: 10000
+         progressWatchedQueryTemplate: http://playback-microservice/v1/playback/location/product/{productId}?customerId={customerId}&apiKey={tenantId}
+         canWatchNowQueryTemplate: http://entitlement-microservice/v1/entitlement/check/product/{productId}?customerId={customerId}&apiKey={tenantId}
+
    
 
 promotion-microservice:
          databaseServiceName: http://database-microservice
-         progressWatchedQueryTemplate: http://playback-microservice/v1/playback/location/product/{productId}?customerId={customerId}&apiKey={tenantId}
-         canWatchNowQueryTemplate: http://entitlement-microservice/v1/entitlement/check/product/{productId}?customerId={customerId}&apiKey={tenantId}
-
+         
          
          
 purchase-microservice:
