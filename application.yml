@@ -86,7 +86,9 @@ product-microservice:
    
 
 promotion-microservice:
-         databaseServiceName: http://database-microservice        
+         databaseServiceName: http://database-microservice
+         progressWatchedQueryTemplate: http://playback-microservice/v1/playback/location/product/{productId}?customerId={customerId}&apiKey={tenantId}
+         canWatchNowQueryTemplate: http://entitlement-microservice/v1/entitlement/check/product/{productId}?customerId={customerId}&apiKey={tenantId}
 
          
          
