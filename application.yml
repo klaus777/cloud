@@ -85,11 +85,15 @@ notification-microservice:
         defaultDeleteTenantNotificationSubject: ${serviceName} Tenant Deleted
         defaultAddAdministratorNotificationSubject: ${serviceName} Tenant Administrator Added
         defaultRemoveAdministratorNotificationSubject: ${serviceName} Tenant Administrator Removed
+        databaseServiceName: http://database-microservice
         smptProperties:
                 mail.smtp.auth: true
-		        mail.smtp.starttls.enable: true
-		        mail.smtp.host: smtp.gmail.com
-		        mail.smtp.port: 587 
+		mail.smtp.starttls.enable: true
+		mail.smtp.host: smtp.gmail.com
+		mail.smtp.port: 587
+		mail.from: pascal@fenkam.name
+		mail.username: pascal@fenkam.name
+		mail.password: solo77ville/.
          
 playback-microservice:
          databaseServiceName: http://database-microservice
