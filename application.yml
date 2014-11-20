@@ -74,6 +74,11 @@ notification-microservice:
         defaultDeleteTenantNotificationTemplate: Hi {firstName},\n Your tenant account has been deleted. We are sorry to see you leave and hope to see you soon again.\n Your {serviceName} Team.
         defaultAddAdministratorNotificationTemplate: Hi {firstName},\n User with email {adminEmail} has been added as administrator of your tenant: {tenantName}. Thanks for choosing {serviceName}.\n Your Libertas Team.
         defaultRemoveAdministratorNotificationTemplate: Hi {firstName},\n User with email {adminEmail} has been removed as administrator of your tenant: {tenantName}. Thanks for choosing {serviceName}.\n Your Libertas Team.
+        smptProperties:
+                mail.smtp.auth: true
+		        mail.smtp.starttls.enable: true
+		        mail.smtp.host: smtp.gmail.com"
+		        mail.smtp.port: 587 
          
 playback-microservice:
          databaseServiceName: http://database-microservice
