@@ -77,7 +77,7 @@ notification-microservice:
         smptProperties:
                 mail.smtp.auth: true
 		        mail.smtp.starttls.enable: true
-		        mail.smtp.host: smtp.gmail.com"
+		        mail.smtp.host: smtp.gmail.com
 		        mail.smtp.port: 587 
          
 playback-microservice:
