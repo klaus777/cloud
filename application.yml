@@ -72,8 +72,8 @@ notification-microservice:
         defaultCreateTenantNotificationTemplate: Hi {firstName},\n Your tenant account has been created. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
         defaultUpdateTenantNotificationTemplate: Hi {firstName},\n Your tenant account has been updated. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
         defaultDeleteTenantNotificationTemplate: Hi {firstName},\n Your tenant account has been deleted. We are sorry to see you leave and hope to see you soon again.\n Your {serviceName} Team.
-        defaultAddAdministratorNotificationTemplate: Hi {firstName},\n User with email {adminEmail} has been added as administrator of your tenant: {tenantName}. Thanks for choosing {serviceName}.\n Your Libertas Team.
-        defaultRemoveAdministratorNotificationTemplate: Hi {firstName},\n User with email {adminEmail} has been removed as administrator of your tenant: {tenantName}. Thanks for choosing {serviceName}.\n Your Libertas Team.
+        defaultAddAdministratorNotificationTemplate: Hi {firstName},\n User with email {adminEmail} has been added as administrator of your tenant, {tenantName}. Thanks for choosing {serviceName}.\n Your Libertas Team.
+        defaultRemoveAdministratorNotificationTemplate: Hi {firstName},\n User with email {adminEmail} has been removed as administrator of your tenant, {tenantName}. Thanks for choosing {serviceName}.\n Your Libertas Team.
         defaultCreateCustomerNotificationSubject: {serviceName} Account Created
         defaultUpdateCustomerNotificationSubject: {serviceName} Account Updated
         defaultDeleteCustomerNotificationSubject: {serviceName} Account Deleted
