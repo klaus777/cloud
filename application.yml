@@ -45,6 +45,9 @@ creditcard-microservice:
 customer-microservice:
          databaseServiceName: http://database-microservice
          resetPasswordTopic: resetPasswordTopic
+         updateCustomerTopic: updateCustomerTopic
+         createCustomerTopic: createCustomerTopic
+         deleteCustomerTopic: deleteCustomerTopic
 
 device-microservice:
          databaseServiceName: http://database-microservice
@@ -99,6 +102,7 @@ purchase-microservice:
          tenantServiceName: http://tenant-microservice
          offerServiceName: http://offer-microservice
          entitlementServiceName: http://entitlement-microservice
+         purchaseTopic: purchaseTopic
          braintree: 
                 environment: sandbox
                 merchantId: ddd44gynpmzcw45f
@@ -142,9 +146,15 @@ rotten-tomatoes-microservice:
 tenant-microservice:
          databaseServiceName: http://database-microservice
          createCustomerUrlTemplate: http://customer-microservice/v1/customer
+         createTenantTopic: createTenantTopic
+         updateTenantTopic: updateTenantTopic
+         addAdministratorTopic: addAdministratorTopic
+         removeAdministratorTopic: removeAdministratorTopic
+         deleteTenantTopic: deleteTenantTopic
     
 watchhistory-microservice:
          databaseServiceName: http://database-microservice
+         
          
 workflow-microservice:
          databaseServiceName: http://database-microservice
