@@ -88,7 +88,7 @@ notification-microservice:
                 addAdministratorNotificationSubject: \$serviceName Tenant Administrator Added
                 removeAdministratorNotificationSubject: \$serviceName Tenant Administrator Removed
         databaseServiceName: http://database-microservice
-        smptProperties:
+        smtpProperties:
                 mail.smtp.auth: true
                 mail.smtp.starttls.enable: true
                 mail.smtp.host: smtp.gmail.com
