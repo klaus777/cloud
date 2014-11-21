@@ -48,6 +48,7 @@ customer-microservice:
          updateCustomerTopic: updateCustomerTopic
          createCustomerTopic: createCustomerTopic
          deleteCustomerTopic: deleteCustomerTopic
+         changePasswordTopic: changePasswordTopic
 
 device-microservice:
          databaseServiceName: http://database-microservice
