@@ -65,28 +65,28 @@ offer-microservice:
          
 notification-microservice:
         velocityTemplates:
-                createCustomerNotificationTemplate: Hi {firstName},\n Your account has been created. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
-                updateCustomerNotificationTemplate: Hi {firstName},\n Your account has been updated. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
-                deleteCustomerNotificationTemplate: Hi {firstName},\n Your account has been deleted. We are sorry to see you leave and hope to see you soon again.\n Your {serviceName} Team.
-                changePasswordNotificationTemplate: Hi {firstName},\n Your password has been changed. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
-                resetPasswordNotificationTemplate: Hi {firstName},\n Your password has been reset to {newPassword}. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
+                createCustomerNotificationTemplate: Hi \$firstName,\n Your account has been created. Thanks for choosing \$serviceName.\n Your \$serviceName Team.
+                updateCustomerNotificationTemplate: Hi \$firstName,\n Your account has been updated. Thanks for choosing \$serviceName.\n Your \$serviceName Team.
+                deleteCustomerNotificationTemplate: Hi \$firstName,\n Your account has been deleted. We are sorry to see you leave and hope to see you soon again.\n Your \$serviceName Team.
+                changePasswordNotificationTemplate: Hi \$firstName,\n Your password has been changed. Thanks for choosing \$serviceName.\n Your \$serviceName Team.
+                resetPasswordNotificationTemplate: Hi \$firstName,\n Your password has been reset to {newPassword}. Thanks for choosing \$serviceName.\n Your \$serviceName Team.
                 purchaseNotificationTemplate: 
-                createTenantNotificationTemplate: Hi \$firstName,\n Your tenant account has been created. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
-                updateTenantNotificationTemplate: Hi {firstName},\n Your tenant account has been updated. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
-                deleteTenantNotificationTemplate: Hi {firstName},\n Your tenant account has been deleted. We are sorry to see you leave and hope to see you soon again.\n Your {serviceName} Team.
-                addAdministratorNotificationTemplate: Hi {firstName},\n User with email {adminEmail} has been added as administrator of your tenant, {tenantName}. Thanks for choosing {serviceName}.\n Your Libertas Team.
-                removeAdministratorNotificationTemplate: Hi {firstName},\n User with email {adminEmail} has been removed as administrator of your tenant, {tenantName}. Thanks for choosing {serviceName}.\n Your Libertas Team.
-                createCustomerNotificationSubject: Account Created
-                updateCustomerNotificationSubject: Account Updated
-                deleteCustomerNotificationSubject: Account Deleted
-                changePasswordNotificationSubject: Password Changed
-                resetPasswordNotificationSubject: Password Reset
-                purchaseNotificationSubject: Invoice
-                createTenantNotificationSubject: Tenant Created
-                updateTenantNotificationSubject: Tenant Configuration Updated
-                deleteTenantNotificationSubject: Tenant Deleted
-                addAdministratorNotificationSubject: Tenant Administrator Added
-                removeAdministratorNotificationSubject: Tenant Administrator Removed
+                createTenantNotificationTemplate: Hi \$firstName,\n Your tenant account has been created. Thanks for choosing \$serviceName.\n Your \$serviceName Team.
+                updateTenantNotificationTemplate: Hi \$firstName,\n Your tenant account has been updated. Thanks for choosing \$serviceName.\n Your \$serviceName Team.
+                deleteTenantNotificationTemplate: Hi \$firstName,\n Your tenant account has been deleted. We are sorry to see you leave and hope to see you soon again.\n Your \$serviceName Team.
+                addAdministratorNotificationTemplate: Hi \$firstName,\n User with email {adminEmail} has been added as administrator of your tenant, {tenantName}. Thanks for choosing \$serviceName.\n Your Libertas Team.
+                removeAdministratorNotificationTemplate: Hi \$firstName,\n User with email {adminEmail} has been removed as administrator of your tenant, {tenantName}. Thanks for choosing \$serviceName.\n Your Libertas Team.
+                createCustomerNotificationSubject: \$serviceName Account Created
+                updateCustomerNotificationSubject: \$serviceName Account Updated
+                deleteCustomerNotificationSubject: \$serviceName Account Deleted
+                changePasswordNotificationSubject: \$serviceName Password Changed
+                resetPasswordNotificationSubject: \$serviceName Password Reset
+                purchaseNotificationSubject: \$serviceName Invoice
+                createTenantNotificationSubject: \$serviceName Tenant Created
+                updateTenantNotificationSubject: \$serviceName Tenant Configuration Updated
+                deleteTenantNotificationSubject: \$serviceName Tenant Deleted
+                addAdministratorNotificationSubject: \$serviceName Tenant Administrator Added
+                removeAdministratorNotificationSubject: \$serviceName Tenant Administrator Removed
         databaseServiceName: http://database-microservice
         smptProperties:
                 mail.smtp.auth: true
