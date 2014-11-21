@@ -70,7 +70,7 @@ notification-microservice:
         defaultChangePasswordNotificationTemplate: Hi {firstName},\n Your password has been changed. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
         defaultResetPasswordNotificationTemplate: Hi {firstName},\n Your password has been reset to {newPassword}. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
         defaultPurchaseNotificationTemplate: 
-        defaultCreateTenantNotificationTemplate: Hi {firstName},\n Your tenant account has been created. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
+        defaultCreateTenantNotificationTemplate: Hi ${firstName},\n Your tenant account has been created. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
         defaultUpdateTenantNotificationTemplate: Hi {firstName},\n Your tenant account has been updated. Thanks for choosing {serviceName}.\n Your {serviceName} Team.
         defaultDeleteTenantNotificationTemplate: Hi {firstName},\n Your tenant account has been deleted. We are sorry to see you leave and hope to see you soon again.\n Your {serviceName} Team.
         defaultAddAdministratorNotificationTemplate: Hi {firstName},\n User with email {adminEmail} has been added as administrator of your tenant, {tenantName}. Thanks for choosing {serviceName}.\n Your Libertas Team.
