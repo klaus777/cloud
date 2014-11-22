@@ -59,7 +59,9 @@ entitlement-microservice:
 
 genre-microservice:
          databaseServiceName: http://database-microservice
-
+ingestion:
+        libertasFileSystemHotfolder: C:/Temp/hotfolder
+        
 offer-microservice:
          databaseServiceName: http://database-microservice
          
