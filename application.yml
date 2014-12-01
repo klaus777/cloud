@@ -60,9 +60,66 @@ entitlement-microservice:
 genre-microservice:
          databaseServiceName: http://database-microservice
 ingestion:
-        workflow:
+        devicePresetMapping:
+                H264_Smooth_Streaming_720p: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264_Smooth_Streaming_720p_for_3G_or_4G: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264_Broadband_720p: 16:9,HD,IPAD_HD,Wide_Screen
+                H264_Smooth_Streaming_1080p: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264_Adaptive_Bitrate_MP4_Set_720p: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264_Adaptive_Bitrate_MP4_Set_SD_16x9: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264_Adaptive_Bitrate_MP4_Set_SD_4x3: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264_Adaptive_Bitrate_MP4_Set_1080p_for_iOS_Cellular_Only: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264_Smooth_Streaming_SD_4x3: 16:9,HLS,SMOOTH,Wide_Screen
+                H264_Smooth_Streaming_SD_16x9: 16:9,HLS,SMOOTH,Wide_Screen
+                VC1_Smooth_Streaming_1080p: 16:9,HLS,SMOOTH,Wide_Screen
+                H264_Adaptive_Bitrate_MP4_Set_1080p: 16:9,HLS,SMOOTH,Wide_Screen
+        videoConfig:
+                LibertasAzurePreviewOperation: ENCODE_PACKAGE
+                CamelAzureEncryptorConfigPath: classpath:media-encryptor.xml
+                CamelAzurePackagerConfigPath: classpath:media-packager-hls.xml
+                CamelAzureURLSuffix: (format=m3u8-aapl) 
+                LibertasAzureEncodePreset: H264_Smooth_Streaming_SD_4x3      
+        metadataConfig:
+                LibertasBindingRegex: .*/([a-zA-Z0-9-]*)_[a-zA-Z0-9\\\\.]*
+                LibertasOverwriteList: false
+                LibertasAPIKeyRegex: .*/([a-fA-F0-9-]*)/.*
+                LibertasSearchableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
+                LibertasFileSystemHotfolder: /var/libertas/hotfolders
+                LibertasFTPUsername: vienna
+                LibertasS3LocalTempDirectory: C:/Temp/S3
+                LibertasFTPPassword: man2than4
+                LibertasFTPHotfolder: lemarkt.com:9031/ftp/dev
+                LibertasPreviewEncodePresets: 
+                LibertasImageTypeRegex: 
+                LibertasS3ImageBucketName: libertasimages
+                LibertasFTPLocalWorkingDirectory: C:/Users/pfenkam/localworkingdir
+                LibertasCDNBaseURL: https://s3.amazonaws.com
+                LibertasImageTypeDefault: Thumbnail
+                CameAzureLocalTempDirectory: /var/libertas/azure
+                libertasS3LocalTempDirectory: C:/Temp/s3
+                libertasS3ImageBucketName: libertas
                 libertasFileSystemHotfolder: C:/Temp/hotfolder
-        
+                libertasAPIKeyRegex: .*/([a-fA-F0-9-]*)/.*
+                apiKey: 
+                LibertasProductDB: ${libertas.database.prefix}LibertasProductDB
+                LibertasSOLRSelectURL: http4://localhost:8983/solr/select
+                LibertasSOLRUpdateURL: http4://localhost:8983/solr/update    
+        previewConfig:
+                LibertasAzurePreviewOperation: ENCODE_PACKAGE
+                CamelAzureEncryptorConfigPath: classpath:media-encryptor.xml
+                CamelAzurePackagerConfigPath: classpath:media-packager-hls.xml
+                CamelAzureURLSuffix: (format=m3u8-aapl) 
+                LibertasAzureEncodePreset: H264_Smooth_Streaming_SD_4x3
+                mediaServiceUri: https://media.windows.net/API/
+                OAuthUri: https://wamsprodglobal001acs.accesscontrol.windows.net/v2/OAuth2-13
+                scope: urn:WindowsAzureMediaServices
+                encodePriority: 2
+                policyDurationInMinute: 15
+                clientId: fenkamlibertas1
+                clientSecret: WHPM4Bn+ZlsZGY2i/kjBin5S4J87Ntpp0OGPl1bRLRI=
+       
+                
+
 offer-microservice:
          databaseServiceName: http://database-microservice
          
