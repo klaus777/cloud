@@ -78,7 +78,7 @@ ingestion:
                 CamelAzureEncryptorConfigPath: /media-encryptor.xml
                 CamelAzurePackagerConfigPath: /media-packager-hls.xml
                 CamelAzureURLSuffix: (format=m3u8-aapl) 
-                LibertasAzureEncodePreset: H264_Smooth_Streaming_SD_4x3      
+                LibertasAzureEncodePreset: H264 Smooth Streaming SD 4x3      
         metadataConfig:
                 LibertasBindingRegex: .*/([a-zA-Z0-9-]*)_[a-zA-Z0-9\\\\.]*
                 LibertasOverwriteList: false
@@ -109,7 +109,7 @@ ingestion:
                 CamelAzureEncryptorConfigPath: /media-encryptor.xml
                 CamelAzurePackagerConfigPath: /media-packager-hls.xml
                 CamelAzureURLSuffix: (format=m3u8-aapl) 
-                LibertasAzureEncodePreset: H264_Smooth_Streaming_SD_4x3
+                LibertasAzureEncodePreset: H264 Smooth Streaming SD 4x3
                 mediaServiceUri: https://media.windows.net/API/
                 OAuthUri: https://wamsprodglobal001acs.accesscontrol.windows.net/v2/OAuth2-13
                 scope: urn:WindowsAzureMediaServices
