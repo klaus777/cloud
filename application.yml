@@ -61,22 +61,22 @@ genre-microservice:
          databaseServiceName: http://database-microservice
 ingestion:
         devicePresetMapping:
-                H264_Smooth_Streaming_720p: 16:9,HD,SMOOTH_HD,Wide_Screen
-                H264_Smooth_Streaming_720p_for_3G_or_4G: 16:9,HD,SMOOTH_HD,Wide_Screen
-                H264_Broadband_720p: 16:9,HD,IPAD_HD,Wide_Screen
-                H264_Smooth_Streaming_1080p: 16:9,HD,SMOOTH_HD,Wide_Screen
-                H264_Adaptive_Bitrate_MP4_Set_720p: 16:9,HD,SMOOTH_HD,Wide_Screen
-                H264_Adaptive_Bitrate_MP4_Set_SD_16x9: 16:9,HD,SMOOTH_HD,Wide_Screen
-                H264_Adaptive_Bitrate_MP4_Set_SD_4x3: 16:9,HD,SMOOTH_HD,Wide_Screen
-                H264_Adaptive_Bitrate_MP4_Set_1080p_for_iOS_Cellular_Only: 16:9,HD,SMOOTH_HD,Wide_Screen
-                H264_Smooth_Streaming_SD_4x3: 16:9,HLS,SMOOTH,Wide_Screen
-                H264_Smooth_Streaming_SD_16x9: 16:9,HLS,SMOOTH,Wide_Screen
-                VC1_Smooth_Streaming_1080p: 16:9,HLS,SMOOTH,Wide_Screen
-                H264_Adaptive_Bitrate_MP4_Set_1080p: 16:9,HLS,SMOOTH,Wide_Screen
+                H264 Smooth Streaming 720p: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264 Smooth Streaming 720p for 3G or 4G: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264 Broadband 720p: 16:9,HD,IPAD_HD,Wide_Screen
+                H264 Smooth Streaming 1080p: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264 Adaptive Bitrate MP4 Set 720p: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264 Adaptive Bitrate MP4 Set SD 16x9: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264 Adaptive Bitrate MP4 Set SD 4x3: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264 Adaptive Bitrate MP4 Set 1080p for iOS Cellular Only: 16:9,HD,SMOOTH_HD,Wide_Screen
+                H264 Smooth Streaming SD 4x3: 16:9,HLS,SMOOTH,Wide_Screen
+                H264 Smooth Streaming SD 16x9: 16:9,HLS,SMOOTH,Wide_Screen
+                VC1 Smooth Streaming 1080p: 16:9,HLS,SMOOTH,Wide_Screen
+                H264 Adaptive Bitrate MP4 Set 1080p: 16:9,HLS,SMOOTH,Wide_Screen
         videoConfig:
                 LibertasAzurePreviewOperation: ENCODE_PACKAGE
-                CamelAzureEncryptorConfigPath: classpath:media-encryptor.xml
-                CamelAzurePackagerConfigPath: classpath:media-packager-hls.xml
+                CamelAzureEncryptorConfigPath: /media-encryptor.xml
+                CamelAzurePackagerConfigPath: /media-packager-hls.xml
                 CamelAzureURLSuffix: (format=m3u8-aapl) 
                 LibertasAzureEncodePreset: H264_Smooth_Streaming_SD_4x3      
         metadataConfig:
@@ -106,8 +106,8 @@ ingestion:
                 LibertasSOLRUpdateURL: http4://localhost:8983/solr/update    
         previewConfig:
                 LibertasAzurePreviewOperation: ENCODE_PACKAGE
-                CamelAzureEncryptorConfigPath: classpath:media-encryptor.xml
-                CamelAzurePackagerConfigPath: classpath:media-packager-hls.xml
+                CamelAzureEncryptorConfigPath: /media-encryptor.xml
+                CamelAzurePackagerConfigPath: /media-packager-hls.xml
                 CamelAzureURLSuffix: (format=m3u8-aapl) 
                 LibertasAzureEncodePreset: H264_Smooth_Streaming_SD_4x3
                 mediaServiceUri: https://media.windows.net/API/
