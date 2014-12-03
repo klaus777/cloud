@@ -120,6 +120,8 @@ ingestion:
                 clientId: fenkamlibertas1
                 clientSecret: WHPM4Bn+ZlsZGY2i/kjBin5S4J87Ntpp0OGPl1bRLRI=
                 LibertasS3EdgecastBucketName: aumedgecast
+                LibertasS3EdgecastMP4Prefix: http://wpc.116d3.edgecastcdn.net/80116D3/aumedgecdn/
+                LibertasS3EdgecastHLSPrefix: http://wpc.116d3.edgecastcdn.net/83116D3/aumedgecdn/
        
                 
 
