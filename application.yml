@@ -106,7 +106,7 @@ ingestion:
                 apiKey: 
                 LibertasProductDB: ${libertas.database.prefix}LibertasProductDB
                 LibertasSOLRSelectURL: http4://localhost:8983/solr/select
-                LibertasSOLRUpdateURL: http4://localhost:8983/solr/update    
+                LibertasSOLRUpdateURL: http4://localhost:8983/solr/update
         previewConfig:
                 LibertasAzurePreviewOperation: ENCODE_PACKAGE
                 CamelAzureEncryptorConfigPath: /media-encryptor.xml
@@ -120,6 +120,7 @@ ingestion:
                 policyDurationInMinute: 15
                 clientId: fenkamlibertas1
                 clientSecret: WHPM4Bn+ZlsZGY2i/kjBin5S4J87Ntpp0OGPl1bRLRI=
+                LibertasS3EdgecastBucketName: aumedgecast
        
                 
 
