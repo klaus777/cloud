@@ -60,8 +60,7 @@ entitlement-microservice:
 genre-microservice:
          databaseServiceName: http://database-microservice
 ingestion:
-        moduleRootFolder: D:/SharedVM/Workspaces/bitbucket/renaissance/ingestion-microservice/src/main/resources/
-        contextLocationPattern: routes
+        moduleRootFolder: D:/SharedVM/Workspaces/bitbucket/renaissance/ingestion-microservice/src/main/resources/routes
         activeModulesPattern: .*
         devicePresetMapping:
                 H264 Smooth Streaming 720p: 16:9,HD,SMOOTH_HD,Wide_Screen
