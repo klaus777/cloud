@@ -19,7 +19,7 @@ zookeeper:
    baseSleepTimeMs: 500
    maxRetries: 10
    
-hls-microservice:
+hls:
     hlsKey: key2
     rottenUrl: http://api.rottentomatoes.com/api/public/v1.0/movies/{rottenTomatoesProductId}/similar.json?apikey={apiKey}
 
@@ -30,37 +30,37 @@ hystrix:
 
 
          
-bookmark-microservice:
-         databaseServiceName: http://database-microservice
+bookmark:
+         databaseServiceName: http://database
 
-creditcard-microservice:
+creditcard:
     braintree:
          environment: sandbox
          merchantId: ddd44gynpmzcw45f
          publicKey: b4vn98989c7xs7dn
          privateKey: b197ffecb8077b6932fc3c69ef11f91a
-    databaseServiceName: http://database-microservice
+    databaseServiceName: http://database
          
 
-customer-microservice:
-         databaseServiceName: http://database-microservice
+customer:
+         databaseServiceName: http://database
          resetPasswordTopic: resetPasswordTopic
          updateCustomerTopic: updateCustomerTopic
          createCustomerTopic: createCustomerTopic
          deleteCustomerTopic: deleteCustomerTopic
          changePasswordTopic: changePasswordTopic
 
-device-microservice:
-         databaseServiceName: http://database-microservice
+device:
+         databaseServiceName: http://database
 
-entitlement-microservice:
-         databaseServiceName: http://database-microservice
-         solrReadUrl: http://solr-slave-microservice/solr/select
+entitlement:
+         databaseServiceName: http://database
+         solrReadUrl: http://solrslave/solr/select
 
-genre-microservice:
-         databaseServiceName: http://database-microservice
+genre:
+         databaseServiceName: http://database
 ingestion:
-        moduleRootFolder: D:/SharedVM/Workspaces/bitbucket/renaissance/ingestion-microservice/src/main/resources/routes
+        moduleRootFolder: D:/SharedVM/Workspaces/bitbucket/renaissance/ingestion/src/main/resources/routes
         activeModulesPattern: .*
         devicePresetMapping:
                 H264 Smooth Streaming 720p: 16:9,HD,SMOOTH_HD,Wide_Screen
@@ -124,7 +124,7 @@ ingestion:
                 LibertasS3EdgecastHLSBaseUrl: http://wpc.116d3.edgecastcdn.net/83116D3/aumedgecdn/
        
                 
-oauth2-microservice:
+oauth2:
     publicKey: &publicKey -----BEGIN PUBLIC KEY-----MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgGyCoGf0mH00M9BG0lYCS/WnlGcrBJkkjUKKYmR5CI+SUu5N+RAqC4lLFImRV4kGSiyFD8iv5sXZGnK+gVSq33dGI3DjW+RfmgKoUPKKPomSqnhJ/k+CSmGetfMLgOP4afIc7ucSEzqeLtAn3Ml6kmIAaRCvhnkj+ZHzjpxlW8GDAgMBAAE=-----END PUBLIC KEY-----
     privateKey: -----BEGIN RSA PRIVATE KEY-----MIICWwIBAAKBgGyCoGf0mH00M9BG0lYCS/WnlGcrBJkkjUKKYmR5CI+SUu5N+RAqC4lLFImRV4kGSiyFD8iv5sXZGnK+gVSq33dGI3DjW+RfmgKoUPKKPomSqnhJ/k+CSmGetfMLgOP4afIc7ucSEzqeLtAn3Ml6kmIAaRCvhnkj+ZHzjpxlW8GDAgMBAAECgYBFZpapZmtRSN4KzAEjOXzTtUbZZU4flJ00fcXIdRDgormf6QbvK7UNLpQIGIlf/kHaj5A0zyxORjkAQo/9UvxxOrqpJ8l9tayg4jg61adPZa0xegL/btIyfKl+tf6snljmgYhtHiGFsV8cK8Pd1oc9eS6kODPGYPKCpSXtuRg/QQJBALaDlSqKY7kNlJrJvjGX1BRy/TioOFbrlQGlqQAsJETS/jdei3uILx3SzqMWBR0ZVVYhHjruPcNmBZZ5oLyrF/kCQQCYMzH3+kqLLEIvFoDZVZh24lkXOJIKToujH1FBEXQDAG946BftIXXZ48cEIPn/lR6LknMPoFOuNXi5X9GGAxxbAkAYFuH3TXDAGgTFMV+DGDELyemWMs3M2yc9omnd9fWLh/W5xSbP1TeyzgIsEFn4b0GOLqzYxl0sjyippcALZuGxAkEAhuj6ZgEqimrUz8B2vi8tUlQY/Ihci15MUG+2KqM53l9IcDfq3XtHZ7iL9JD2iSK5TKan7zYCdu1W8ZqJsuyW+QJAZiO5LnmMKd+kbXvy0GKVujLF5pH57l3OiT09FK0Q4p+DtRpXhDpTC0NLHyplUuzPPgnanSqYzaOVUGaDWDYKUw==-----END RSA PRIVATE KEY-----
     clientId: libertas
@@ -136,23 +136,21 @@ oauth2-microservice:
           - write
     grantTypes: 
           - password
-    
-oauth2:
-  client:
-    tokenUri: http://oauth-microservice/uaa/oauth/token
-    authorizationUri: http://oauth-microservice/uaa/oauth/authorize
-    clientId: acme
-    clientSecret: acmesecret
-  resource:
-    jwt:
-        keyValue: *publicKey
+    client:
+       tokenUri: http://oauth/uaa/oauth/token
+       authorizationUri: http://oauth/uaa/oauth/authorize
+       clientId: acme
+       clientSecret: acmesecret
+    resource:
+       jwt:
+           keyValue: *publicKey
     id: openid
     serviceId: ${PREFIX:}resource
     
-offer-microservice:
-         databaseServiceName: http://database-microservice
+offer:
+         databaseServiceName: http://database
          
-notification-microservice:
+notification:
         velocityTemplates:
                 createCustomerNotificationTemplate: Hi \$firstName,$newline Your account has been created. Thanks for choosing \$serviceName.$newline Your \$serviceName Team.
                 updateCustomerNotificationTemplate: Hi \$firstName,$newline Your account has been updated. Thanks for choosing \$serviceName.$newline Your \$serviceName Team.
@@ -176,7 +174,7 @@ notification-microservice:
                 deleteTenantNotificationSubject: \$serviceName Tenant Deleted
                 addAdministratorNotificationSubject: \$serviceName Tenant Administrator Added
                 removeAdministratorNotificationSubject: \$serviceName Tenant Administrator Removed
-        databaseServiceName: http://database-microservice
+        databaseServiceName: http://database
         smtpProperties:
                 mail.smtp.auth: true
                 mail.smtp.starttls.enable: true
@@ -186,44 +184,44 @@ notification-microservice:
                 mail.username: pascal@fenkam.name
                 mail.password: solo77ville/.
          
-playback-microservice:
-         databaseServiceName: http://database-microservice
+playback:
+         databaseServiceName: http://database
          playbackResponseTimoutMillis: 200
          playbackResponseMinCount: 1
          playbackLocationRequestTopic: playback-location-request2
          playbackLocationResponseTopic: playback-location-response2
-         SolrReadUrl: http://solr-slave-microservice/solr/select
+         SolrReadUrl: http://solrslave/solr/select
          playbackLocationFrequencyMillis: 10000
-         entitlementServiceUrlTemplate: http://entitlement-microservice/v1/entitlement/check/product/{productId}?customerId={customerId}&apiKey={tenantId}
+         entitlementServiceUrlTemplate: http://entitlement/v1/entitlement/check/customer/{customerId}/product/{productId}?apiKey={tenantId}
          deviceSpecMapping:
              mobile.*: .*
 
-product-microservice:
-         solrReadUrl: http://solr-slave-microservice/solr/select
-         solrWriteUrl: http://solr-master-microservice/solr/update
+product:
+         solrReadUrl: http://solrslave/solr/select
+         solrWriteUrl: http://solrmaster/solr/update
          defaultSearcheableFields: title,id,directors,producers,genres,shorttitle,actors,producttype,releaseyear
          defaultQueryTemplate: title:{}  OR directors:{} OR shorttitle:{} OR producers:{} 
-         databaseServiceName: http://database-microservice
-         tenantServiceName: http://tenant-microservice
-         offerServiceName: http://offer-microservice
+         databaseServiceName: http://database
+         tenantServiceName: http://tenant
+         offerServiceName: http://offer
          createProductLockPath: /catalog/product/lock/create
          createProductLockTimeoutMillis: 10000
-         progressWatchedQueryTemplate: http://playback-microservice/v1/playback/location/product/{productId}?customerId={customerId}&apiKey={tenantId}
-         canWatchNowQueryTemplate: http://entitlement-microservice/v1/entitlement/check/product/{productId}?customerId={customerId}&apiKey={tenantId}
+         progressWatchedQueryTemplate: http://playback/v1/playback/location/product/{productId}?customerId={customerId}&apiKey={tenantId}
+         canWatchNowQueryTemplate: http://entitlement/v1/entitlement/check/product/{productId}?customerId={customerId}&apiKey={tenantId}
 
    
 
-promotion-microservice:
-         databaseServiceName: http://database-microservice
+promotion:
+         databaseServiceName: http://database
          
          
          
-purchase-microservice:
-         solrReadUrl: http://solr-slave-microservice/solr/select
-         databaseServiceName: http://database-microservice
-         tenantServiceName: http://tenant-microservice
-         offerServiceName: http://offer-microservice
-         entitlementServiceName: http://entitlement-microservice
+purchase:
+         solrReadUrl: http://solrslave/solr/select
+         databaseServiceName: http://database
+         tenantServiceName: http://tenant
+         offerServiceName: http://offer
+         entitlementServiceName: http://entitlement
          purchaseTopic: purchaseTopic
          braintree: 
                 environment: sandbox
@@ -231,65 +229,56 @@ purchase-microservice:
                 publicKey: b4vn98989c7xs7dn
                 privateKey: b197ffecb8077b6932fc3c69ef11f91a
          
-rating-microservice:
-         databaseServiceName: http://database-microservice
+rating:
+         databaseServiceName: http://database
          avgUserRatingComputationFrequencyMilis: 600000
          updateProductPath: /v1/product
-         productServiceName: product-microservice
+         productServiceName: product
          avgUserRatingKafkaGroupId: rating.avg-user-rating.id
          ratingCreationTopic: createRating
          
-review-microservice:
-         databaseServiceName: http://database-microservice
+review:
+         databaseServiceName: http://database
 
-recommendation-microservice:
-        solrReadUrl: http://solr-slave-microservice/solr/select
-        databaseServiceName: http://database-microservice
+recommendation:
+        solrReadUrl: http://solrslave/solr/select
+        databaseServiceName: http://database
         
-rotten-tomatoes-enrich-microservice:
-        solrReadUrl: http://solr-slave-microservice/solr/select
-        solrWriteUrl: http://solr-master-microservice/solr/update?commit=true
-        databaseServiceName: http://database-microservice
+rottentomatoesenrich:
+        solrReadUrl: http://solrslave/solr/select
+        solrWriteUrl: http://solrmaster/solr/update?commit=true
+        databaseServiceName: http://database
         searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey={apiKey}&q={searchTerm}&page_limit=1
         applicationKey: nwwhgh8hhtfvu77u85s25nc8
         solrSchemaChangeUrl: http://localhost:8983/solr/schema/fields
         quickPlaySourceUrl: http://54.191.76.80:8700/catalog-api/titles?type=movie&pageSize={pageSize}&pageNumber={pageNumber}
         
-rotten-tomatoes-microservice:
+rottentomatoes:
         applicationName: LibertasQP
         applicationKey: nwwhgh8hhtfvu77u85s25nc8
-        databaseServiceName: http://database-microservice
-        solrReadUrl: http://solr-slave-microservice/solr/select
+        databaseServiceName: http://database
+        solrReadUrl: http://solrslave/solr/select
         searchQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey={apiKey}&q={searchTerm}&page_limit=5
         similarQueryUrlTemplate: http://api.rottentomatoes.com/api/public/v1.0/movies/{rottenTomatoesProductId}/similar.json?apikey={apiKey}
         rottenTomatoesIdField: rottenTomatoesId
         manualRecommendationFallbackEnabled: false
         
-tenant-microservice:
-         databaseServiceName: http://database-microservice
-         createCustomerUrlTemplate: http://customer-microservice/v1/customer
+tenant:
+         databaseServiceName: http://database
+         createCustomerUrlTemplate: http://customer/v1/customer
          createTenantTopic: createTenantTopic
          updateTenantTopic: updateTenantTopic
          addAdministratorTopic: addAdministratorTopic
          removeAdministratorTopic: removeAdministratorTopic
          deleteTenantTopic: deleteTenantTopic
     
-watchhistory-microservice:
-         databaseServiceName: http://database-microservice
+watchhistory:
+         databaseServiceName: http://database
          
          
-workflow-microservice:
-         databaseServiceName: http://database-microservice
-zuul:
-    proxy:
-        route:
-            customer-microservice: /customer
-            tenant-microservice: /tenant
-            device-microservice: /device
-            recommendation-microservice: /v1/recommendation
-            rotten-tomatoes-microservice: /v1/rt-recommendation
-            hls-microservice: /v1/hls
-   
+workflow:
+         databaseServiceName: http://database
+
 endpoints:
   autoconfig:
     id: autoconfig
