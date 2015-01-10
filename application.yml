@@ -207,7 +207,7 @@ product:
          createProductLockPath: /catalog/product/lock/create
          createProductLockTimeoutMillis: 10000
          progressWatchedQueryTemplate: http://playback/v1/playback/location/product/{productId}?customerId={customerId}&apiKey={tenantId}
-         canWatchNowQueryTemplate: http://entitlement/v1/entitlement/check/product/{productId}?customerId={customerId}&apiKey={tenantId}
+         canWatchNowQueryTemplate: http://entitlement/internal/v1/admin/entitlement/check/product/{productId}?customerId={customerId}&apiKey={tenantId}
 
    
 
