@@ -192,7 +192,7 @@ playback:
          playbackLocationResponseTopic: playback-location-response2
          SolrReadUrl: http://solrslave/solr/select
          playbackLocationFrequencyMillis: 10000
-         entitlementServiceUrlTemplate: http://entitlement/v1/entitlement/check/product/{productId}?apiKey={tenantId}&customerId={customerId}
+         entitlementServiceUrlTemplate: http://entitlement/internal/v1/admin/entitlement/check/product/{productId}?apiKey={tenantId}&customerId={customerId}
          deviceSpecMapping:
              mobile.*: .*
 
