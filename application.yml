@@ -221,8 +221,8 @@ purchase:
          databaseServiceName: http://database
          tenantServiceName: http://tenant
          offerServiceName: http://offer
-         entitlementServiceName: http://entitlement
          purchaseTopic: purchaseTopic
+         entitlementCreationUrlTemplate: http://entitlement/internal/v1/admin/entitlement/product/{productId}/offer/{offerId}?apiKey={tenantId}
          braintree: 
                 environment: sandbox
                 merchantId: ddd44gynpmzcw45f
