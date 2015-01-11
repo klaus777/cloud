@@ -60,8 +60,9 @@ entitlement:
 genre:
          databaseServiceName: http://database
 ingestion:
-        moduleRootFolder: D:/SharedVM/Workspaces/bitbucket/renaissance/ingestion/src/main/resources/routes
-        activeModulesPattern: .*
+        amazonAccessKey: AKIAIM5OO2IPEXXAIDXA
+        amazonSecretKey: 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
+        amazonMaxConnectionCount: 10
         devicePresetMapping:
                 H264 Smooth Streaming 720p: 16:9,HD,SMOOTH_HD,Wide_Screen
                 H264 Smooth Streaming 720p for 3G or 4G: 16:9,HD,SMOOTH_HD,Wide_Screen
